@@ -9,7 +9,6 @@
 |----|----|
 
 **Parking Miru** is a simple parking.
-
 ## Usage
 
 ### Prerequisite
@@ -19,3 +18,8 @@
 ## License
 
 Licensed under the [MIT license](LICENSE).
+
+<br>
+<img align="center" src="https://1.bp.blogspot.com/-rOzaFundJJs/XDXbpw5esdI/AAAAAAABRCk/0tKMShMDKW0YGvuTwT2lvC01wRj89xNNQCLcBGAs/s400/iromegane_man.png" width="700"></img>
+</br>	
+
