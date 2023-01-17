@@ -1,5 +1,3 @@
-# AI-Parking-Space-by-Smart-Pole-TNI-Cybersec
-AI Parking Space by Smart Pole TNI Cybersec
 <br>
 <img align="right" src="https://imgur.com/SN6ZqUt.png" width="450"></img>
 <p align="center">
