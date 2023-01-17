@@ -1,5 +1,5 @@
 <br>
-<img align="right" src="https://imgur.com/SN6ZqUt.png" width="450"></img>
+<img align="right" src="https://1.bp.blogspot.com/-rOzaFundJJs/XDXbpw5esdI/AAAAAAABRCk/0tKMShMDKW0YGvuTwT2lvC01wRj89xNNQCLcBGAs/s400/iromegane_man.png" width="450"></img>
 <p align="center">
 </br>	
 
@@ -18,8 +18,3 @@
 ## License
 
 Licensed under the [MIT license](LICENSE).
-
-<br>
-<img align="center" src="https://1.bp.blogspot.com/-rOzaFundJJs/XDXbpw5esdI/AAAAAAABRCk/0tKMShMDKW0YGvuTwT2lvC01wRj89xNNQCLcBGAs/s400/iromegane_man.png" width="700"></img>
-</br>	
-
