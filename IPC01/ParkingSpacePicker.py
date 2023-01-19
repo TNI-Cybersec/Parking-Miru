@@ -28,6 +28,6 @@ while True:
     for pos in posList:
         cv2.rectangle(img, pos, (pos[0] + width, pos[1] + height), (255, 0, 255), 2)
 
-    cv2.imshow("Tni Parking AI_01", img)
-    cv2.setMouseCallback("Tni Parking AI_01", mouseClick)
+    cv2.imshow("Tni Parking Space_01", img)
+    cv2.setMouseCallback("Tni Parking Space_01", mouseClick)
     cv2.waitKey(1)
