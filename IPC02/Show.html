@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 35%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+    }
+  </style>
   <head>
     <script>
 
@@ -40,9 +50,12 @@
       setInterval(updateHTML03, 1);
     </script>
   </head>
-  <body> <h1> Available Parking Zone A: <span id="content01"></span> </h1>
-         <h1> Available Parking Zone B: <span id="content02"></span> </h1>
-         <h1> Available Parking Zone C: <span id="content03"></span> </h1>
+  <body> 
+        <div class="center">
+        <h1> Available Parking Zone A: <span id="content01"></span> </h1>
+        <h1> Available Parking Zone B: <span id="content02"></span> </h1>
+        <h1> Available Parking Zone C: <span id="content03"></span> </h1>
+        </div>
     
   </body>
 </html>
