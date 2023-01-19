@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+
+      function updateHTML01() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("content01").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "Parking_Zone_B.txt", true);
+        xhttp.send();
+      }
+      setInterval(updateHTML01, 1);
+
+      function updateHTML02() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("content02").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "Parking_Zone_B.txt", true);
+        xhttp.send();
+      }
+      setInterval(updateHTML02, 1);
+
+      function updateHTML03() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("content03").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "Parking_Zone_B.txt", true);
+        xhttp.send();
+      }
+      setInterval(updateHTML03, 1);
+    </script>
+  </head>
+  <body> <h1> Available Parking Zone A: <span id="content01"></span> </h1>
+         <h1> Available Parking Zone B: <span id="content02"></span> </h1>
+         <h1> Available Parking Zone C: <span id="content03"></span> </h1>
+    
+  </body>
+</html>
