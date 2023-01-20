@@ -5,10 +5,10 @@ function updateHTML01() {
             document.getElementById("content01").innerHTML = this.responseText;
           }
         };
-        xhttp.open("GET", "IPC01/Parking_Zone_A.txt", true);
+        xhttp.open("GET", "Parking_Zone_A.txt", true);
         xhttp.send();
       }
-      setInterval(updateHTML01, 1);
+      setInterval(updateHTML01, 3000);
 
       function updateHTML02() {
         var xhttp = new XMLHttpRequest();
@@ -17,10 +17,10 @@ function updateHTML01() {
             document.getElementById("content02").innerHTML = this.responseText;
           }
         };
-        xhttp.open("GET", "IPC02/Parking_Zone_B.txt", true);
+        xhttp.open("GET", "Parking_Zone_B.txt", true);
         xhttp.send();
       }
-      setInterval(updateHTML02, 1);
+      setInterval(updateHTML02, 3000);
 
       function updateHTML03() {
         var xhttp = new XMLHttpRequest();
@@ -29,7 +29,7 @@ function updateHTML01() {
             document.getElementById("content03").innerHTML = this.responseText;
           }
         };
-        xhttp.open("GET", "IPC03/Parking_Zone_C.txt", true);
+        xhttp.open("GET", "Parking_Zone_C.txt", true);
         xhttp.send();
       }
-      setInterval(updateHTML03, 1);
+      setInterval(updateHTML03, 3000);
