@@ -24,10 +24,10 @@ def mouseClick(events, x, y, flags, params):
 
 
 while True:
-    img = cv2.imread('TniParkImg.jpg')
+    im = cv2.imread('TniParkImg.jpg')
     for pos in posList:
-        cv2.rectangle(img, pos, (pos[0] + width, pos[1] + height), (255, 0, 255), 2)
+        cv2.rectangle(im, pos, (pos[0] + width, pos[1] + height), (255, 0, 255), 2)
 
-    cv2.imshow("Tni Parking Space_03", img)
+    cv2.imshow("Tni Parking Space_03", im)
     cv2.setMouseCallback("Tni Parking Space_03", mouseClick)
     cv2.waitKey(1)
