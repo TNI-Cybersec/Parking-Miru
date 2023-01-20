@@ -9,6 +9,8 @@ q = queue.Queue()
 width, height = 30, 20
 
 # Video feed from IPC03 via RTSP
+global im
+im = None
 cap = cv2.VideoCapture("rtsp://streaming.planetcloud.cloud:5541/7f6a5e94-60b4-4a0e-b564-cdabff325120/0")
 
 # Video feed via File Local
@@ -19,15 +21,15 @@ with open('TniParkPos', 'rb') as f:
     posList = pickle.load(f)
 
 
-def checkParkingSpace(imgPro):
+def checkParkingSpace(imPro):
     spaceCounter = 0
 
     for pos in posList:
         x, y = pos
 
-        imgCrop = imgPro[y:y + height, x:x + width]
-        # cv2.imshow(str(x * y), imgCrop)
-        count = cv2.countNonZero(imgCrop)
+        imCrop = imPro[y:y + height, x:x + width]
+        # cv2.imshow(str(x * y), imCrop)
+        count = cv2.countNonZero(imCrop)
 
         if count < 50:
             color = (0, 255, 0)
@@ -37,28 +39,28 @@ def checkParkingSpace(imgPro):
             color = (0, 0, 255)
             thickness = 3
 
-        cv2.rectangle(img, pos, (pos[0] + width, pos[1] + height), color, thickness)
+        cv2.rectangle(im, pos, (pos[0] + width, pos[1] + height), color, thickness)
 
         # Record Variable in Text File
         d = spaceCounter
-        with open('Parking_Zone_C.txt', 'w') as f:
+        with open('../FileText/Parking_Zone_C.txt', 'w') as f:
             f.write(str(d) + '\n')
 
         # Show count on rectangle space
-        cvzone.putTextRect(img, str(count), (x, y + height - 3), scale=1, thickness=2, offset=0, colorR=color)
+        cvzone.putTextRect(im, str(count), (x, y + height - 3), scale=1, thickness=2, offset=0, colorR=color)
 
     # Show Info on Camera
-    cvzone.putTextRect(img, f'Parking Zone C : {spaceCounter} from {len(posList)} Slot', (20, 49), scale=3,
-                       thickness=3, offset=20, colorR=(0, 0, 0))
+    # cvzone.putTextRect(im, f'Parking Zone C : {spaceCounter} from {len(posList)} Slot', (20, 49), scale=3,
+    #                   thickness=3, offset=20, colorR=(0, 0, 0))
 
     # Show Info Full Screen
-    # cvzone.putTextRect(img, f'Parking Zone C : {spaceCounter}', (430, 150), scale=7,
-    #                    thickness=10, offset=1920, colorT=(255, 255, 255), colorR=(0, 0, 0))
+    cvzone.putTextRect(im, f'Parking Zone C : {spaceCounter}', (430, 150), scale=7,
+                       thickness=10, offset=1920, colorT=(255, 255, 255), colorR=(0, 0, 0))
 
 
 while True:
     # RTSP H.264 Codec Video
-    ret, img = cap.read()
+    ret, im = cap.read()
     if cv2.waitKey(1) == ord('q'):
         break
 
@@ -69,15 +71,15 @@ while True:
     if cap.get(cv2.CAP_PROP_POS_FRAMES) == cap.get(cv2.CAP_PROP_FRAME_COUNT):
         cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
 
-    success, img = cap.read()
-    imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    imgBlur = cv2.GaussianBlur(imgGray, (3, 3), 1)
-    imgThreshold = cv2.adaptiveThreshold(imgBlur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+    success, im = cap.read()
+    imGray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+    imBlur = cv2.GaussianBlur(imGray, (3, 3), 1)
+    imThreshold = cv2.adaptiveThreshold(imBlur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
                                          cv2.THRESH_BINARY_INV, 25, 16)
-    imgMedian = cv2.medianBlur(imgThreshold, 5)
+    imMedian = cv2.medianBlur(imThreshold, 5)
     kernel = np.ones((3, 3), np.uint8)
-    imgDilate = cv2.dilate(imgMedian, kernel, iterations=1)
+    imDilate = cv2.dilate(imMedian, kernel, iterations=1)
 
-    checkParkingSpace(imgDilate)
+    checkParkingSpace(imDilate)
 
-    cv2.imshow("Tni Parking IPC03", img)
+    cv2.imshow("Tni Parking IPC03", im)
