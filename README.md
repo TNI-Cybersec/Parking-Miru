@@ -15,6 +15,10 @@
 
 - Install Python & Lib
 
+```sh
+$ pip install -r requirements.txt
+```
+
 ## License
 
 Licensed under the [MIT license](LICENSE).
