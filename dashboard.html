@@ -38,6 +38,10 @@
       font-size: 40px;
     }
 
+    scorll {
+      font-size: 55px;
+    }
+
     .A{
       color: rgb(255, 85, 85) !important;
     }
@@ -52,7 +56,7 @@
 
     .hero {
       position: absolute;
-      top: 35%;
+      top: 30%;
       left: 50%;
       min-width: 40%;
       /* bring your own prefixes */
@@ -61,7 +65,7 @@
 
     .center {
       position: absolute;
-      top: 50%;
+      top: 45%;
       left: 50%;
       min-width: 40%;
       /* bring your own prefixes */
@@ -70,7 +74,7 @@
 
     .center2 {
       position: absolute;
-      top: 60%;
+      top: 55%;
       left: 50%;
       min-width: 40%;
       /* bring your own prefixes */
@@ -79,7 +83,7 @@
 
     .center3 {
       position: absolute;
-      top: 75%;
+      top: 70%;
       left: 50%;
       min-width: 40%;
       /* bring your own prefixes */
@@ -90,6 +94,7 @@
   <head>
     <script src="js/clockEN.js"></script>
     <script src="js/ParkingNum.js"></script>
+    <script src="js/scrollText.js"></script>
   </head>
   <body> 
 
@@ -112,10 +117,11 @@
           </li>
         </ul>
         <span class="navbar-text">
-          <h3 id="date"></h3>
+          <scorll id="date"></scorll>
         </span>
       </div>
     </nav>
+
     <div class="container hero text-center">
         <div>
           <h2>Avaliable Parking<br></h2>
@@ -164,7 +170,28 @@
          <h1 id="content03"></h1>
         </div>
       </div>
-    </div>         
+    </div>     
+    <nav class="navbar navbar-expand-lg fixed-bottom">
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            
+          </li>
+          <li class="nav-item">
+            
+          </li>
+          <li class="nav-item">
+           
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <h3 id="date"></h3>
+        </span>
+      </div>
+      <div id="content">
+      </div>
+      <marquee direction="left" scrollamount="10"><scorll>Cybersec ในคำนิยามของเราหมายถึงหลายอย่างๆที่เกี่ยวกับทั้งทางด้าน Cyber Security & Technology ซึ่งครอบคลุมทั้งในหลายด้านเช่น ความมั่นคงทางไซเบอร์, ความปลอดภัยทางไซเบอร์, ความน่าเชื่อถือของระบบหรือขบวนการต่างๆทางไซเบอร์และการวิจัยศึกษาคิดค้นการนำเครื่องมือทางด้านเทคโนโลยีและกระบวนการที่รวมถึงวิธีการปฏิบัติที่ถูกออกแบบไว้เพื่อป้องกันและรับมือที่อาจมีช่องโหว่หรือมีการป้องกันที่อ่อนแออาจจะถูกโจมตีเข้ามาในเครือข่ายโครงสร้างพื้นฐานทางสารสนเทศหรือระบบโปรแกรมที่อาจจะเกิดความเสียหายจากการที่ถูกเข้าถึงจากบุคคลที่สามโดยไม่ได้รับอนุญาต</scorll></marquee>    
+    </nav>
   </body>
 
 </html>
