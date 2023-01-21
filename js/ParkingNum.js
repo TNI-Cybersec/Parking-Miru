@@ -8,7 +8,7 @@ function updateHTML01() {
   xhttp.open("GET", "FileText/Parking_Zone_A.txt", true);
   xhttp.send();
 }
-setInterval(updateHTML01, 1);
+setInterval(updateHTML01, 10);
 
 function updateHTML02() {
   var xhttp = new XMLHttpRequest();
@@ -20,7 +20,7 @@ function updateHTML02() {
   xhttp.open("GET", "FileText/Parking_Zone_B.txt", true);
   xhttp.send();
 }
-setInterval(updateHTML02, 1);
+setInterval(updateHTML02, 10);
 
 function updateHTML03() {
   var xhttp = new XMLHttpRequest();
@@ -32,4 +32,4 @@ function updateHTML03() {
   xhttp.open("GET", "FileText/Parking_Zone_C.txt", true);
   xhttp.send();
 }
-setInterval(updateHTML03, 1);
+setInterval(updateHTML03, 10);

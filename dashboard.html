@@ -41,8 +41,12 @@
         font-size: 40px;
       }
 
+      status {
+        font-size: 50px;
+      }
+
       noti {
-        font-size: 55px;
+        font-size: 60px;
       }
 
       .A {
@@ -67,9 +71,9 @@
       }
 
       .notinavbar {
-        float: none;
+        float: center;
         position: absolute;
-        top: 0%;
+        top: -5%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
@@ -153,13 +157,12 @@
         alt="Logo"
         height="60"
       />
-      <h3>ㅤ</h3>
+      <h4>ㅤ</h4>
       <img
         src="https://tni-cybersec.github.io/img/TNICyberWeb.png"
         alt="Logo"
         height="60"
       />
-      <span class="navbar-toggler-icon"></span>
 
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
@@ -167,10 +170,10 @@
           <li class="nav-item"></li>
         </ul>
         <span class="navbar-text">
-          <scorll>ㅤPM2.5:40ㅤ</scorll>
+          <status>ㅤPM2.5:40ㅤ</status>
         </span>
         <span class="navbar-text">
-          <scorll id="date"></scorll>
+          <status id="date"></status>
         </span>
       </div>
     </nav>
@@ -229,7 +232,6 @@
       </div>
     </div>
     
-
     <nav class="navbar navbar-expand-lg fixed-bottom">
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
