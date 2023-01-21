@@ -41,7 +41,7 @@
         font-size: 40px;
       }
 
-      scorll {
+      noti {
         font-size: 55px;
       }
 
@@ -63,6 +63,14 @@
         left: 50%;
         min-width: 40%;
         /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+      }
+
+      .notinavbar {
+        float: none;
+        position: absolute;
+        top: 0%;
+        left: 50%;
         transform: translate(-50%, -50%);
       }
 
@@ -220,22 +228,20 @@
         </div>
       </div>
     </div>
+    
+
     <nav class="navbar navbar-expand-lg fixed-bottom">
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item"></li>
-          <li class="nav-item"></li>
-          <li class="nav-item"></li>
+          <noti class="notinavbar" id="text"></noti>
         </ul>
         <span class="navbar-text">
-          <h3 id="date"></h3>
         </span>
       </div>
-      <div id="content"></div>
     </nav>
 
     <script src="js/clockEN.js"></script>
     <script src="js/ParkingNum.js"></script>
-    <script src="js/scrollText.js"></script>
+    <script src="js/NotiText.js"></script>
   </body>
 </html>

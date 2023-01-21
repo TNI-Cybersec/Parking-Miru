@@ -50,12 +50,12 @@ def checkParkingSpace(imPro):
         cvzone.putTextRect(im, str(count), (x, y + height - 3), scale=1, thickness=2, offset=0, colorR=color)
 
     # Show Info on Camera
-    # cvzone.putTextRect(im, f'Parking Zone B : {spaceCounter} from {len(posList)} Slot', (20, 49), scale=3,
-    #                    thickness=3, offset=20, colorR=(0, 0, 0))
+        cvzone.putTextRect(im, f'Parking Zone B : {spaceCounter} from {len(posList)} Slot', (20, 49), scale=3,
+                        thickness=3, offset=20, colorR=(0, 0, 0))
 
     # Show Info Full Screen
-    cvzone.putTextRect(im, f'Parking Zone B : {spaceCounter}', (430, 150), scale=7,
-                       thickness=10, offset=1920, colorT=(255, 255, 255), colorR=(0, 0, 0))
+    # cvzone.putTextRect(im, f'Parking Zone B : {spaceCounter}', (430, 150), scale=7,
+    #                  thickness=10, offset=1920, colorT=(255, 255, 255), colorR=(0, 0, 0))
 
 
 while True:
