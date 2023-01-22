@@ -27,7 +27,7 @@
         padding: 0;
         width: 100%;
         height: 100%;
-        font-family: "Krub", sans-serif !important;
+        font-family: "Krub", sans-serif;
         background: #000000 !important;
         color: rgb(255, 255, 255);
       }
@@ -48,8 +48,13 @@
         font-size: 45px;
       }
 
+      logo {
+        font-size: 55px;
+        font-family: "Oswald", sans-serif !important;
+      }
+
       noti {
-        font-size: 60px;
+        font-size: 85px;
       }
 
       .A {
@@ -66,24 +71,16 @@
 
       .hero {
         position: absolute;
-        top: 30%;
+        top: 25%;
         left: 50%;
         min-width: 40%;
         /* bring your own prefixes */
         transform: translate(-50%, -50%);
       }
 
-      .notinavbar {
-        float: center;
-        position: absolute;
-        top: -5%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-
       .center {
         position: absolute;
-        top: 45%;
+        top: 38%;
         left: 50%;
         min-width: 40%;
         /* bring your own prefixes */
@@ -92,7 +89,7 @@
 
       .center2 {
         position: absolute;
-        top: 55%;
+        top: 46%;
         left: 50%;
         min-width: 40%;
         /* bring your own prefixes */
@@ -101,9 +98,18 @@
 
       .center3 {
         position: absolute;
-        top: 70%;
+        top: 62%;
         left: 50%;
         min-width: 40%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+      }
+
+      .center4 {
+        position: absolute;
+        top: 82%;
+        left: 50%;
+        min-width: 100%;
         /* bring your own prefixes */
         transform: translate(-50%, -50%);
       }
@@ -156,16 +162,12 @@
   <body>
     <nav class="navbar navbar-expand-lg">
       <img
-        src="https://tni-cybersec.github.io/img/logoTNIWhite.png"
+        src="https://1.bp.blogspot.com/-rOzaFundJJs/XDXbpw5esdI/AAAAAAABRCk/0tKMShMDKW0YGvuTwT2lvC01wRj89xNNQCLcBGAs/s400/iromegane_man.png"
         alt="Logo"
-        height="50"
+        height="75"
       />
       <p>ㅤ</p>
-      <img
-        src="https://tni-cybersec.github.io/img/TNICyberWeb.png"
-        alt="Logo"
-        height="50"
-      />
+      <logo><b>Parking Miru</b></logo>
 
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
@@ -240,13 +242,33 @@
         </div>
       </div>
     </div>
+
+    <div class="container center4 text-center">
+      <div>
+        <noti id="text"></noti>
+      </div>
+    </div>
     
     <nav class="navbar navbar-expand-lg fixed-bottom">
+      <img
+        src="https://tni-cybersec.github.io/img/logoTNIWhite.png"
+        alt="Logo"
+        height="50"
+      />
+      <p>ㅤ</p>
+      <img
+        src="https://tni-cybersec.github.io/img/TNICyberWeb.png"
+        alt="Logo"
+        height="50"
+      />
+
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
-          <noti class="notinavbar" id="text"></noti>
+          <li class="nav-item"></li>
+          <li class="nav-item"></li>
         </ul>
         <span class="navbar-text">
+          
         </span>
       </div>
     </nav>
