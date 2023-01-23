@@ -14,7 +14,7 @@ im = None
 cap = cv2.VideoCapture("rtsp://streaming.planetcloud.cloud:5541/7f6a5e94-60b4-4a0e-b564-cdabff325120/0")
 
 # Set the buffer size
-cap.set(cv2.CAP_PROP_BUFFERSIZE, 25)
+cap.set(cv2.CAP_PROP_BUFFERSIZE, 256)
 
 # Video feed via File Local
 # cap = cv2.VideoCapture('TniPark_M.mp4')
@@ -67,9 +67,9 @@ while True:
     if cv2.waitKey(1) == ord('q'):
         break
 
-        # For Video feed via RTSP
-        cv2.destroyAllWindows()
-        cap.release()
+    # For Video feed via RTSP
+    cv2.destroyAllWindows()
+    cap.release()
 
     if cap.get(cv2.CAP_PROP_POS_FRAMES) == cap.get(cv2.CAP_PROP_FRAME_COUNT):
         cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
