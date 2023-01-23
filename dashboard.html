@@ -1,288 +1,278 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parking Miru | Dashboard</title>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Krub:100,100i,300,300i,400,400i,500,500i,700,700i"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parking Miru | Dashboard</title>
 
-    <link rel="icon" href="https://1.bp.blogspot.com/-rOzaFundJJs/XDXbpw5esdI/AAAAAAABRCk/0tKMShMDKW0YGvuTwT2lvC01wRj89xNNQCLcBGAs/s400/iromegane_man.png" />
+  <link href="https://fonts.googleapis.com/css?family=Krub:100,100i,300,300i,400,400i,500,500i,700,700i"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" />
 
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        font-family: "Krub", sans-serif;
-        background: #000000 !important;
-        color: rgb(255, 255, 255);
+  <link rel="icon"
+    href="https://1.bp.blogspot.com/-rOzaFundJJs/XDXbpw5esdI/AAAAAAABRCk/0tKMShMDKW0YGvuTwT2lvC01wRj89xNNQCLcBGAs/s400/iromegane_man.png" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: "Krub", sans-serif;
+      background: #000000 !important;
+      color: rgb(255, 255, 255);
+    }
+
+    h1 {
+      font-size: 180px;
+    }
+
+    h2 {
+      font-size: 120px;
+    }
+
+    h3 {
+      font-size: 40px;
+    }
+
+    status {
+      font-size: 45px;
+    }
+
+    logo {
+      font-size: 55px;
+      font-family: "Codystar", sans-serif !important;
+    }
+
+    noti {
+      font-size: 85px;
+      font-weight: 700;
+    }
+
+    .A {
+      color: rgb(255, 85, 85) !important;
+    }
+
+    .B {
+      color: rgb(89, 255, 161) !important;
+    }
+
+    .C {
+      color: rgb(0, 183, 255) !important;
+    }
+
+    .hero {
+      position: absolute;
+      top: 22%;
+      left: 50%;
+      min-width: 40%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+    }
+
+    .center {
+      position: absolute;
+      top: 36%;
+      left: 50%;
+      min-width: 40%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+    }
+
+    .center2 {
+      position: absolute;
+      top: 44%;
+      left: 50%;
+      min-width: 40%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+    }
+
+    .center3 {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      min-width: 40%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+    }
+
+    .center4 {
+      position: absolute;
+      top: 78%;
+      left: 50%;
+      min-width: 100%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+    }
+
+    .snowflake {
+      color: #fff;
+      font-size: 1.5em;
+      font-family: Arial, sans-serif;
+      text-shadow: 0 0 5px #000;
+    }
+
+    @-webkit-keyframes snowflakes-fall {
+      0% {
+        top: -10%;
       }
 
-      h1 {
-        font-size: 180px;
+      100% {
+        top: 100%;
+      }
+    }
+
+    @-webkit-keyframes snowflakes-shake {
+
+      0%,
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
       }
 
-      h2 {
-        font-size: 120px;
+      50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px);
+      }
+    }
+
+    @keyframes snowflakes-fall {
+      0% {
+        top: -10%;
       }
 
-      h3 {
-        font-size: 40px;
+      100% {
+        top: 100%;
+      }
+    }
+
+    @keyframes snowflakes-shake {
+
+      0%,
+      100% {
+        transform: translateX(0);
       }
 
-      status {
-        font-size: 45px;
+      50% {
+        transform: translateX(80px);
       }
+    }
+  </style>
+</head>
 
-      logo {
-        font-size: 55px;
-        font-family: "Codystar", sans-serif !important;
-      }
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <img src="https://cdn.discordapp.com/attachments/855044705482178630/1067085228788695090/ParkingMiru.png" alt="Logo"
+      height="60" />
 
-      noti {
-        font-size: 85px;
-        font-weight: 700;
-      }
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"></li>
+        <li class="nav-item"></li>
+      </ul>
+      <span class="navbar-text">
+        <status><i class="fa-solid fa-temperature-three-quarters"></i> <span id="">20°C</span>ㅤ</status>
+      </span>
+      <span class="navbar-text">
+        <status><i class="fa-solid fa-droplet"></i> <span id="">40%</span>ㅤ</status>
+      </span>
+      <span class="navbar-text">
+        <status><i class="fa-solid fa-smog"></i> <span id="">😨</span>ㅤ</status>
+      </span>
+      <span class="navbar-text">
+        <status><i class="fa-solid fa-clock"></i> <span id="date"></span></status>
+      </span>
+    </div>
+  </nav>
 
-      .A {
-        color: rgb(255, 85, 85) !important;
-      }
+  <div class="container hero text-center">
+    <div>
+      <h2>Avaliable Parking<br /></h2>
+    </div>
+  </div>
 
-      .B {
-        color: rgb(89, 255, 161) !important;
-      }
-
-      .C {
-        color: rgb(0, 183, 255) !important;
-      }
-
-      .hero {
-        position: absolute;
-        top: 22%;
-        left: 50%;
-        min-width: 40%;
-        /* bring your own prefixes */
-        transform: translate(-50%, -50%);
-      }
-
-      .center {
-        position: absolute;
-        top: 36%;
-        left: 50%;
-        min-width: 40%;
-        /* bring your own prefixes */
-        transform: translate(-50%, -50%);
-      }
-
-      .center2 {
-        position: absolute;
-        top: 44%;
-        left: 50%;
-        min-width: 40%;
-        /* bring your own prefixes */
-        transform: translate(-50%, -50%);
-      }
-
-      .center3 {
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        min-width: 40%;
-        /* bring your own prefixes */
-        transform: translate(-50%, -50%);
-      }
-
-      .center4 {
-        position: absolute;
-        top: 78%;
-        left: 50%;
-        min-width: 100%;
-        /* bring your own prefixes */
-        transform: translate(-50%, -50%);
-      }
-
-      .snowflake {
-        color: #fff;
-        font-size: 1.5em;
-        font-family: Arial, sans-serif;
-        text-shadow: 0 0 5px #000;
-      }
-
-      @-webkit-keyframes snowflakes-fall {
-        0% {
-          top: -10%;
-        }
-        100% {
-          top: 100%;
-        }
-      }
-      @-webkit-keyframes snowflakes-shake {
-        0%,
-        100% {
-          -webkit-transform: translateX(0);
-          transform: translateX(0);
-        }
-        50% {
-          -webkit-transform: translateX(80px);
-          transform: translateX(80px);
-        }
-      }
-      @keyframes snowflakes-fall {
-        0% {
-          top: -10%;
-        }
-        100% {
-          top: 100%;
-        }
-      }
-      @keyframes snowflakes-shake {
-        0%,
-        100% {
-          transform: translateX(0);
-        }
-        50% {
-          transform: translateX(80px);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg">
-      <img
-        src="https://cdn.discordapp.com/attachments/855044705482178630/1067085228788695090/ParkingMiru.png"
-        alt="Logo"
-        height="70"
-      />
-
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item"></li>
-          <li class="nav-item"></li>
-        </ul>
-        <span class="navbar-text">
-          <status><i class="fa-solid fa-temperature-three-quarters"></i> <span id="">20°C</span>ㅤ</status>
-        </span>
-        <span class="navbar-text">
-          <status><i class="fa-solid fa-droplet"></i> <span id="">40%</span>ㅤ</status>
-        </span>
-        <span class="navbar-text">
-          <status><i class="fa-solid fa-smog"></i> <span id="">😨</span>ㅤ</status>
-        </span>
-        <span class="navbar-text">
-          <status><i class="fa-solid fa-clock"></i> <span id="date"></span></status>
-        </span>
+  <div class="container center text-center">
+    <div class="row">
+      <div class="col A">
+        <h3>Zone</h3>
+        <br />
       </div>
-    </nav>
-
-    <div class="container hero text-center">
-      <div>
-        <h2>Avaliable Parking<br /></h2>
+      <div class="col B">
+        <h3>Zone</h3>
+        <br />
+      </div>
+      <div class="col C">
+        <h3>Zone</h3>
+        <br />
       </div>
     </div>
+  </div>
 
-    <div class="container center text-center">
-      <div class="row">
-        <div class="col A">
-          <h3>Zone</h3>
-          <br />
-        </div>
-        <div class="col B">
-          <h3>Zone</h3>
-          <br />
-        </div>
-        <div class="col C">
-          <h3>Zone</h3>
-          <br />
-        </div>
+  <div class="container center2 text-center">
+    <div class="row">
+      <div class="col A">
+        <h2>A</h2>
+        <br />
+      </div>
+      <div class="col B">
+        <h2>B</h2>
+        <br />
+      </div>
+      <div class="col C">
+        <h2>C</h2>
+        <br />
       </div>
     </div>
+  </div>
 
-    <div class="container center2 text-center">
-      <div class="row">
-        <div class="col A">
-          <h2>A</h2>
-          <br />
-        </div>
-        <div class="col B">
-          <h2>B</h2>
-          <br />
-        </div>
-        <div class="col C">
-          <h2>C</h2>
-          <br />
-        </div>
+  <div class="container center3 text-center">
+    <div class="row">
+      <div class="col A">
+        <h1 id="content01"></h1>
+      </div>
+      <div class="col B">
+        <h1 id="content02"></h1>
+      </div>
+      <div class="col C">
+        <h1 id="content03"></h1>
       </div>
     </div>
+  </div>
 
-    <div class="container center3 text-center">
-      <div class="row">
-        <div class="col A">
-          <h1 id="content01"></h1>
-        </div>
-        <div class="col B">
-          <h1 id="content02"></h1>
-        </div>
-        <div class="col C">
-          <h1 id="content03"></h1>
-        </div>
-      </div>
+  <div class="container center4 text-center">
+    <div>
+      <noti id="text"></noti>
     </div>
+  </div>
 
-    <div class="container center4 text-center">
-      <div>
-        <noti id="text"></noti>
-      </div>
+  <nav class="navbar navbar-expand-lg fixed-bottom">
+    <img src="https://tni-cybersec.github.io/img/logoTNIWhite.png" alt="Logo" height="55" />
+    <p>ㅤ</p>
+    <img src="https://tni-cybersec.github.io/img/TNICyberWeb.png" alt="Logo" height="55" />
+
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"></li>
+        <li class="nav-item"></li>
+      </ul>
+      <span class="navbar-text">
+        <h3>Sponsor By
+          <img src="https://cdn.discordapp.com/attachments/855044705482178630/1067091882217324615/TakahashiB.png"
+            alt="Logo" height="55" />
+        </h3>
+      </span>
     </div>
-    
-    <nav class="navbar navbar-expand-lg fixed-bottom">
-      <img
-        src="https://tni-cybersec.github.io/img/logoTNIWhite.png"
-        alt="Logo"
-        height="55"
-      />
-      <p>ㅤ</p>
-      <img
-        src="https://tni-cybersec.github.io/img/TNICyberWeb.png"
-        alt="Logo"
-        height="55"
-      />
+  </nav>
 
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item"></li>
-          <li class="nav-item"></li>
-            </ul>
-            <span class="navbar-text">
-              <h3>Sponsor By 
-                <img
-                src="https://cdn.discordapp.com/attachments/855044705482178630/1066678663694782575/Takahashi.png"
-                alt="Logo"
-                height="55"
-                />
-              </h3>
-            </span>
-      </div>
-    </nav>
+  <script src="js/clockEN.js"></script>
+  <script src="js/ParkingNum.js"></script>
+  <script src="js/NotiText.js"></script>
 
-    <script src="js/clockEN.js"></script>
-    <script src="js/ParkingNum.js"></script>
-    <script src="js/NotiText.js"></script>
-  
-  </body>
+</body>
+
 </html>
