@@ -13,6 +13,9 @@ global im
 im = None
 cap = cv2.VideoCapture("rtsp://streaming.planetcloud.cloud:5541/7707ed09-0c72-4429-b2ea-a0cc521773ea/0")
 
+# Set the buffer size
+cap.set(cv2.CAP_PROP_BUFFERSIZE, 25)
+
 # Video feed via File Local
 # cap = cv2.VideoCapture('TniPark_M.mp4')
 

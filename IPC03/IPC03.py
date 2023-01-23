@@ -13,6 +13,9 @@ global im
 im = None
 cap = cv2.VideoCapture("rtsp://streaming.planetcloud.cloud:5541/7f6a5e94-60b4-4a0e-b564-cdabff325120/0")
 
+# Set the buffer size
+cap.set(cv2.CAP_PROP_BUFFERSIZE, 25)
+
 # Video feed via File Local
 # cap = cv2.VideoCapture('TniPark_M.mp4')
 
@@ -50,12 +53,12 @@ def checkParkingSpace(imPro):
         cvzone.putTextRect(im, str(count), (x, y + height - 3), scale=1, thickness=2, offset=0, colorR=color)
 
     # Show Info on Camera
-    # cvzone.putTextRect(im, f'Parking Zone C : {spaceCounter} from {len(posList)} Slot', (20, 49), scale=3,
-    #                   thickness=3, offset=20, colorR=(0, 0, 0))
+    cvzone.putTextRect(im, f'Parking Zone C : {spaceCounter} from {len(posList)} Slot', (20, 49), scale=3,
+                       thickness=3, offset=20, colorR=(0, 0, 0))
 
     # Show Info Full Screen
-    cvzone.putTextRect(im, f'Parking Zone C : {spaceCounter}', (430, 150), scale=7,
-                       thickness=10, offset=1920, colorT=(255, 255, 255), colorR=(0, 0, 0))
+    # cvzone.putTextRect(im, f'Parking Zone C : {spaceCounter}', (430, 150), scale=7,
+    #                   thickness=10, offset=1920, colorT=(255, 255, 255), colorR=(0, 0, 0))
 
 
 while True:
