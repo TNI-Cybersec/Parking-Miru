@@ -1,5 +1,5 @@
 <br>
-<img align="right" src="https://1.bp.blogspot.com/-rOzaFundJJs/XDXbpw5esdI/AAAAAAABRCk/0tKMShMDKW0YGvuTwT2lvC01wRj89xNNQCLcBGAs/s400/iromegane_man.png" width="450"></img>
+<img align="right" src="https://github.com/TNI-Cybersec/Parking-Miru/blob/main/pic/ParkingMiruLogo.png" width="450"></img>
 <p align="center">
 </br>	
 
