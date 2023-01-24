@@ -5,7 +5,7 @@ function updateHTML01() {
       document.getElementById("content01").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "FileText/Parking_Zone_A.txt", true);
+  xhttp.open("GET", "FileText/Parking_Zone_B.txt", true);
   xhttp.send();
 }
 setInterval(updateHTML01, 10);
@@ -17,7 +17,7 @@ function updateHTML02() {
       document.getElementById("content02").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "FileText/Parking_Zone_B.txt", true);
+  xhttp.open("GET", "FileText/Parking_Zone_C.txt", true);
   xhttp.send();
 }
 setInterval(updateHTML02, 10);
