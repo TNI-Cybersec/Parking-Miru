@@ -29,7 +29,7 @@ function updateHTML03() {
       document.getElementById("content03").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "FileText/Parking_Zone_C.txt", true);
+  xhttp.open("GET", "FileText/Parking_Zone_All.txt", true);
   xhttp.send();
 }
 setInterval(updateHTML03, 10);
