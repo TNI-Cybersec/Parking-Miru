@@ -11,11 +11,11 @@ function updateText() {
                   document.getElementById("content").innerHTML = c;
               }
           };
-          xhttp2.open("GET", "Parking_Zone_C.txt", true);
+          xhttp2.open("GET", "FileText/Parking_Zone_C.txt", true);
           xhttp2.send();
       }
   };
-  xhttp.open("GET", "Parking_Zone_B.txt", true);
+  xhttp.open("GET", "FileText/Parking_Zone_B.txt", true);
   xhttp.send();
 }
 setInterval(updateText, 10);
