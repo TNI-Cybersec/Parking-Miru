@@ -54,6 +54,10 @@ body {
     color: rgb(0, 183, 255) !important;
   }
 
+  .Y {
+    color: rgb(255, 187, 0) !important;
+  }
+
   .center {
     position: absolute;
     top: 25%;
