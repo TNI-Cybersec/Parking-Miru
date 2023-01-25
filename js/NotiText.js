@@ -6,7 +6,7 @@ setInterval(function() {
       document.getElementById("text").innerHTML = "🛑 ที่จอดรถสำหรับบุคลากร";
     }
     else {
-      document.getElementById("text").innerHTML = "🆗 รถทุกท่านเข้ามาจอดได้";
+      document.getElementById("text").innerHTML = "🆗 รถทุกท่านสามารถจอดได้";
     }
 }, 1);
   
