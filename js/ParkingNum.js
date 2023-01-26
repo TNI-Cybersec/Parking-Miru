@@ -36,10 +36,11 @@ function getData2() {
         .then(response => response.json())
         .then(data => {
             value2 = data.value2;
-            document.getElementById("value2").innerHTML = data.value2;
+            document.getElementById("value2").innerHTML = data.value2; 
             document.getElementById("result").innerHTML = value1 + value2;
         });
 }
+        document.getElementById("allresult").innerHTML = value1 + value2;
 
 setInterval(getData1, 1000);
 setInterval(getData2, 1000);
