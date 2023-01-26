@@ -8,5 +8,5 @@ setInterval(function() {
     else {
       document.getElementById("text").innerHTML = "🆗 รถทุกท่านสามารถจอดได้";
     }
-}, 1);
+}, 10);
   
