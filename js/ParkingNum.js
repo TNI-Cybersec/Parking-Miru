@@ -19,3 +19,13 @@ function updateText() {
   xhttp.send();
 }
 setInterval(updateText, 1000);
+
+function getData() {
+    fetch('/data')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("contentpy").innerHTML = data.value;
+        });
+}
+
+setInterval(getData, 1000);
