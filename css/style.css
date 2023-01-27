@@ -58,6 +58,10 @@ body {
     color: rgb(255, 187, 0) !important;
   }
 
+  .b {
+    font-weight: 800;
+  }
+
   .center {
     position: absolute;
     top: 25%;
