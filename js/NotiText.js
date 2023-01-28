@@ -1,12 +1,11 @@
 setInterval(function() {
-    var currentTime = new Date();
-    var hours = currentTime.getHours();
+  var currentTime = new Date();
+  var hours = currentTime.getHours();
 
-    if (hours >= 8 && hours < 16) {
-      document.getElementById("text").innerHTML = "🅿 ที่จอดรถบุคลากรและอาจารย์";
-    }
-    else {
-      document.getElementById("text").innerHTML = "🅿 ที่จอดรถบุคคลทั่วไป";
-    }
+  if (hours >= 8 && hours < 16) {
+    document.getElementById("text").innerHTML = "🅿 จำนวนที่จอดรถสำหรับบุคลากร";
+  }
+  else {
+    document.getElementById("text").innerHTML = "🅿 จำนวนรถที่สามารถจอดได้";
+  }
 }, 10);
-  
