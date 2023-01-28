@@ -28,6 +28,10 @@ body {
     font-size: 25px;
   }
 
+  h6 {
+    font-size: 10px;
+  }
+
   status {
     font-size: 45px;
   }
