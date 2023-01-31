@@ -80,6 +80,33 @@ body {
     justify-content: center;
   }
 
+  .scenter {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    min-width: 40%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
+
+  .scenter2 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    min-width: 40%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
+
+  .scenter3 {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    min-width: 100%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
+
   .center {
     position: absolute;
     top: 25%;
