@@ -3,10 +3,10 @@ setInterval(function() {
     var hours = currentTime.getHours();
   
     if (hours >= 8 && hours < 16) {
-      document.getElementById("scoll").innerHTML = "ที่จอดรถสำหรับบุคลากร";
+      document.getElementById("scoll").innerHTML = "ตอนนี้ที่จอดรถสำหรับสำหรับบุคลากรจอดเท่านั้น บุคคลภายนอกยังไม่สามารถจอดที่ตรงนี้ได้";
     }
     else {
-      document.getElementById("scoll").innerHTML = "บุคคลทั่วไปสามารถจอดได้";
+      document.getElementById("scoll").innerHTML = "ตอนนี้บุคคลทั่วไปสามารถจอดได้เลย";
     }
 }, 10);
   
