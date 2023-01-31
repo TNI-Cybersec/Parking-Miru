@@ -110,6 +110,13 @@ body {
     rotate: 270deg;
   }
 
+  .down{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    /* bring your own prefixes */
+  }
+
   .snowflake {
     color: #fff;
     font-size: 1.5em;
