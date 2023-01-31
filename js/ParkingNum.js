@@ -2,14 +2,14 @@ function updateText() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            var a = parseInt(this.responseText);
+            var a = parseFloat(this.responseText);
             if (isNaN(a)) {
                 a = 0;
             }
             var xhttp2 = new XMLHttpRequest();
             xhttp2.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    var b = parseInt(this.responseText);
+                    var b = parseFloat(this.responseText);
                     if (isNaN(b)) {
                         b = 0;
                     }
