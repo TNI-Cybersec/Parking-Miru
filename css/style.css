@@ -149,7 +149,7 @@ body {
 
   .down{
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 20%;
     /* bring your own prefixes */
   }
