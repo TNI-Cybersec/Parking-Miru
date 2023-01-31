@@ -73,6 +73,13 @@ body {
     font-weight: 800;
   }
 
+  .c {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
   .center {
     position: absolute;
     top: 25%;
