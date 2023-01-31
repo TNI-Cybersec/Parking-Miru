@@ -12,6 +12,10 @@ body {
     font-size: 320px;
   }
 
+  h1A {
+    font-size: 340px;
+  }
+
   h2 {
     font-size: 100px;
   }
@@ -149,7 +153,7 @@ body {
 
   .down{
     position: absolute;
-    top: 5%;
+    top: 15%;
     left: 18%;
     /* bring your own prefixes */
   }
