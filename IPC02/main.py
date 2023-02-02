@@ -44,7 +44,10 @@ def checkParkingSpace(imgPro):
     # Show Info on Camera
     cvzone.putTextRect(img, f'Available Parking Zone B : {spaceCounter} Of All {len(posList)}', (20, 49), scale=3,
                         thickness=3, offset=20, colorR=(0, 0, 0))
-
+    # Record Variable in Text File
+    d = spaceCounter
+    with open('../FileText/Parking_Zone_B.txt', 'w') as f:
+        f.write(str(d) + '\n')
     # Show Info Full Screen
     # cvzone.putTextRect(img, f'Parking Zone B : {spaceCounter}', (430, 150), scale=7,
                         # thickness=10, offset=1920, colorT=(255, 255, 255), colorR=(0, 0, 0))
