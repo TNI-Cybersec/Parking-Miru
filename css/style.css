@@ -90,7 +90,7 @@ body {
 
   .scenter {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     min-width: 40%;
     /* bring your own prefixes */
@@ -99,7 +99,7 @@ body {
 
   .scenter2 {
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 50%;
     min-width: 40%;
     /* bring your own prefixes */
@@ -117,7 +117,7 @@ body {
 
   .center {
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 50%;
     min-width: 40%;
     /* bring your own prefixes */
@@ -126,7 +126,7 @@ body {
 
   .center2 {
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     min-width: 40%;
     /* bring your own prefixes */
