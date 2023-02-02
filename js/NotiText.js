@@ -16,9 +16,9 @@ setInterval(function() {
     if (seconds <= 20) {
       document.getElementById("text").innerHTML = "บุคคลทั่วไปสามารถจอดได้";
     } else if (seconds > 20 && seconds <= 40) {
-      document.getElementById("text").innerHTML = "Public Parking Available";
+      document.getElementById("text").innerHTML = "Guest Parking Available";
     } else {
-      document.getElementById("text").innerHTML = "一般人も駐車できます";
+      document.getElementById("text").innerHTML = "ゲストは駐車できます";
     }
   }
 }, 10);
