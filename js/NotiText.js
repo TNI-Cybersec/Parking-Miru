@@ -15,53 +15,29 @@ setInterval(function() {
 
 
   if (hours >= 8 && hours < 16) {
-    if (seconds <= 5) {
+    if (seconds <= 10) {
       document.getElementById("text").innerHTML = Aa;
-    } else if (seconds > 5 && seconds <= 10) {
+    } else if (seconds > 10 && seconds <= 20) {
       document.getElementById("text").innerHTML = Ab;
-    } else if (seconds > 10 && seconds <= 15) {
+    } else if (seconds > 20 && seconds <= 30) {
       document.getElementById("text").innerHTML = Ac;
-    } else if (seconds > 15 && seconds <= 20) {
+    } else if (seconds > 30 && seconds <= 40) {
       document.getElementById("text").innerHTML = Aa;
-    } else if (seconds > 20 && seconds <= 25) {
-      document.getElementById("text").innerHTML = Ab;
-    } else if (seconds > 25 && seconds <= 30) {
-      document.getElementById("text").innerHTML = Ac;
-    } else if (seconds > 30 && seconds <= 35) {
-      document.getElementById("text").innerHTML = Aa;
-    } else if (seconds > 35 && seconds <= 40) {
-      document.getElementById("text").innerHTML = Ab;
-    } else if (seconds > 40 && seconds <= 45) {
-      document.getElementById("text").innerHTML = Ac;
-    } else if (seconds > 40 && seconds <= 45) {
-      document.getElementById("text").innerHTML = Aa;
-    } else if (seconds > 40 && seconds <= 45) {
+    } else if (seconds > 40 && seconds <= 50) {
       document.getElementById("text").innerHTML = Ab;
     } else {
       document.getElementById("text").innerHTML = Ac;
     }
   } else {
-    if (seconds <= 5) {
+    if (seconds <= 10) {
       document.getElementById("text").innerHTML = Ba;
-    } else if (seconds > 5 && seconds <= 10) {
+    } else if (seconds > 10 && seconds <= 20) {
       document.getElementById("text").innerHTML = Bb;
-    } else if (seconds > 10 && seconds <= 15) {
+    } else if (seconds > 20 && seconds <= 30) {
       document.getElementById("text").innerHTML = Bc;
-    } else if (seconds > 15 && seconds <= 20) {
+    } else if (seconds > 30 && seconds <= 40) {
       document.getElementById("text").innerHTML = Ba;
-    } else if (seconds > 20 && seconds <= 25) {
-      document.getElementById("text").innerHTML = Bb;
-    } else if (seconds > 25 && seconds <= 30) {
-      document.getElementById("text").innerHTML = Bc;
-    } else if (seconds > 30 && seconds <= 35) {
-      document.getElementById("text").innerHTML = Ba;
-    } else if (seconds > 35 && seconds <= 40) {
-      document.getElementById("text").innerHTML = Bb;
-    } else if (seconds > 40 && seconds <= 45) {
-      document.getElementById("text").innerHTML = Bc;
-    } else if (seconds > 40 && seconds <= 45) {
-      document.getElementById("text").innerHTML = Ba;
-    } else if (seconds > 40 && seconds <= 45) {
+    } else if (seconds > 40 && seconds <= 50) {
       document.getElementById("text").innerHTML = Bb;
     } else {
       document.getElementById("text").innerHTML = Bc;
