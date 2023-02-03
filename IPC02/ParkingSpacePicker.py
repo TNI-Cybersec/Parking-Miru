@@ -1,7 +1,7 @@
 import cv2
 import pickle
 
-width, height = 30, 20
+width, height = 30, 30
 
 try:
     with open('TniParkPos', 'rb') as f:
@@ -30,4 +30,5 @@ while True:
 
     cv2.imshow("Tni Parking Space_02", im)
     cv2.setMouseCallback("Tni Parking Space_02", mouseClick)
-    cv2.waitKey(1)
+    if cv2.waitKey(1) == ord('q'):
+        break
