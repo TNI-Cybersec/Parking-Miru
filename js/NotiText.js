@@ -11,7 +11,7 @@ setInterval(function() {
 //Set Parking for Guest Noti Text.
   var Ba = "บุคคลทั่วไปสามารถจอดได้";
   var Bb = "Guest Parking Available";
-  var Bc = "ゲストは駐車できます";
+  var Bc = "来賓は駐車できます";
 
 
   if (hours >= 8 && hours < 16) {
