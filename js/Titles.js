@@ -7,7 +7,7 @@ setInterval(function() {
   //Set Parking for Staff Noti Text.
     var TH = "ที่จอดว่าง";
     var EN = "Avaliable";
-    var JP = "スタッ";
+    var JP = "空車";
   //Set Parking for Guest Noti Text.
 
       if (seconds <= 10) {
