@@ -1,7 +1,7 @@
 function refreshTime() {
   var dateString = new Date().toLocaleString("en-GB", {
     dateStyle: "short",
-    timeStyle: "short",
+    timeStyle: "medium",
     timeZone: "Asia/Bangkok",
   });  
   var formattedString = dateString.replace(", ", " ");
