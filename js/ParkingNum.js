@@ -27,12 +27,20 @@ function updateText() {
 setInterval(updateText, 1000);  
 
 function getValues() {
-    fetch("http://localhost:5000/values")
+    let value1;
+    let value2;
+    fetch("http://localhost:5000/values1")
       .then(response => response.json())
       .then(data => {
-        document.getElementById("contentGet").innerHTML =
-          data.value1 + data.value2;
+        value1 = data.value1;
       });
-  }
   
-  setInterval(getValues, 1000);  
+    fetch("http://localhost:5000/values2")
+      .then(response => response.json())
+      .then(data => {
+        value2 = data.value2;
+      });
+    document.getElementById("contentGet").innerHTML = value1 + value2;
+}
+setInterval(getValues, 1000);
+  
