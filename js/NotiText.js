@@ -5,11 +5,11 @@ setInterval(function() {
   var seconds = currentTime.getSeconds();
 
 //Set Parking for Staff Noti Text.
-  var Aa = "ที่จอดรถสำหรับบุคลากร";
+  var Aa = "ที่จอดรถบุคลากร";
   var Ab = "Staff Parking";
   var Ac = "スタッフ用駐車場";
 //Set Parking for Guest Noti Text.
-  var Ba = "บุคคลทั่วไปสามารถจอดได้";
+  var Ba = "บุคคลทั่วไปจอดได้";
   var Bb = "Guest Parking";
   var Bc = "ゲスト用駐車場";
 
