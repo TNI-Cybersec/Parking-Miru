@@ -53,7 +53,7 @@ function updateTextM() {
   xhttp.open("GET", "FileText/Parking_Zone_B.txt", true);
   xhttp.send();
 }
-setInterval(updateTextM, 10000);
+setInterval(updateTextM, 100);
 
 
 function getValues() {
