@@ -1,4 +1,4 @@
-/*
+
 function updateText() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
@@ -15,7 +15,7 @@ function updateText() {
             b = 0;
           }
           var c = a + b;
-          document.getElementById("contentM").innerHTML = c;
+          document.getElementById("content").innerHTML = c;
         }
       };
       xhttp2.open("GET", "FileText/Parking_Zone_C.txt", true);
@@ -26,8 +26,9 @@ function updateText() {
   xhttp.send();
 }
 setInterval(updateText, 1000); 
-*/
 
+
+/*
 function updateText() {
   $.ajax({
     url: "FileText/Parking_Zone_B.txt",
@@ -44,12 +45,13 @@ function updateText() {
             b = 0;
           }
           var c = a + b;
-          $("#contentUpdated").html(c);
+          $("#content").html(c);
         }
       });
     }
   });
 }
+*/
 
 $(document).ready(function () {
   setInterval(updateText, 1000);
