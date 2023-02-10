@@ -43,7 +43,7 @@ function updateTextM() {
             b = 0;
           }
           var c = a + b;
-          document.getElementById("contentM").innerHTML = c;
+          document.getElementById("contentM1").innerHTML = c;
         }
       };
       xhttp2.open("GET", "FileText/Parking_Zone_C.txt", true);
@@ -55,27 +55,36 @@ function updateTextM() {
 }
 setInterval(updateTextM, 1000);
 
+function getParkingSpace() {
+
+}
+
+setInterval(getParkingSpace, 1000);
+
+
+
+let parkingSpace1;
+let parkingSpace2;
 
 function getValues() {
-  let value1;
-  let value2;
-  fetch("http://localhost:3000/values1")
+  fetch("http://localhost:3000/parking_space1")
+  .then(response => response.json())
+  .then(data => {
+    parkingSpace1 = data.parking_space;
+    updateValues();
+  });
+
+  fetch("http://localhost:3000/parking_space2")
     .then(response => response.json())
     .then(data => {
-      value1 = data.value1;
+      parkingSpace2 = data.parking_space;
       updateValues();
     });
 
-  fetch("http://localhost:5000/values2")
-    .then(response => response.json())
-    .then(data => {
-      value2 = data.value2;
-      updateValues();
-    });
 }
 
 function updateValues() {
-  document.getElementById("contentGet").innerHTML = value1 + value2;
+  document.getElementById("contentM").innerHTML = parkingSpace1 + parkingSpace2;
 
 }
 setInterval(getValues, 1000);
