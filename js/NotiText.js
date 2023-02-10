@@ -1,14 +1,14 @@
-setInterval(function() {
+setInterval(function () {
   var currentTime = new Date();
   var hours = currentTime.getHours();
   var minutes = currentTime.getMinutes();
   var seconds = currentTime.getSeconds();
 
-//Set Parking for Staff Noti Text.
+  //Set Parking for Staff Noti Text.
   var Aa = "ที่จอดรถบุคลากร";
   var Ab = "Staff Parking";
   var Ac = "スタッフ用駐車場";
-//Set Parking for Guest Noti Text.
+  //Set Parking for Guest Noti Text.
   var Ba = "บุคคลทั่วไปจอดได้";
   var Bb = "Guest Parking";
   var Bc = "ゲスト用駐車場";

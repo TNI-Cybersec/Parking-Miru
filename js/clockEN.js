@@ -3,7 +3,7 @@ function refreshTime() {
     dateStyle: "short",
     timeStyle: "medium",
     timeZone: "Asia/Bangkok",
-  });  
+  });
   var formattedString = dateString.replace(", ", " ");
   document.getElementById("date").innerHTML = formattedString;
 }

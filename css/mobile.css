@@ -6,223 +6,190 @@ body {
     font-family: "Krub", sans-serif;
     background: #000000 !important;
     color: rgb(255, 255, 255);
-  }
+}
 
-  h1 {
+h1 {
     font-size: 260px;
     font-family: "Share Tech Mono", sans-serif;
-  }
+}
 
-  h2 {
+h2 {
     font-size: 100px;
-  }
+}
 
-  h3 {
+h3 {
     font-size: 65px;
-  }
+}
 
-  h3A {
+h3A {
     font-size: 55px;
-  }
-  h3B {
+}
+
+h3B {
     font-size: 60px;
-  }
+}
 
-  h4 {
+h4 {
     font-size: 30px;
-  }
+}
 
-  h5 {
+h5 {
     font-size: 25px;
-  }
+}
 
-  h6 {
+h6 {
     font-size: 10px;
-  }
+}
 
-  status {
+status {
     font-size: 50px;
     font-weight: 300;
     font-family: "Chivo Mono", sans-serif;
-  }
+}
 
-  logo {
+logo {
     font-size: 55px;
     font-family: "Krub", sans-serif;
-  }
+}
 
-  noti {
+noti {
     font-size: 45px;
     font-weight: 700;
     font-family: "Krub", sans-serif;
-  }
+}
 
-  .R {
+.R {
     color: rgb(255, 85, 85) !important;
-  }
+}
 
-  .G {
+.G {
     color: rgb(89, 255, 161) !important;
-  }
+}
 
-  .B {
+.B {
     color: rgb(0, 183, 255) !important;
-  }
+}
 
-  .Y {
+.Y {
     color: rgb(255, 187, 0) !important;
-  }
+}
 
-  .b {
+.b {
     font-weight: 800;
-  }
+}
 
-  .c {
+.c {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .scenter {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    min-width: 40%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-  }
-
-  .scenter2 {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    min-width: 40%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-  }
-
-  .scenter3 {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    min-width: 100%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-  }
-
-  .centerTop {
+.centerTop {
     position: absolute;
     top: 5%;
     left: 50%;
     min-width: 40%;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
-  }
+}
 
-  .center {
+.center {
     position: absolute;
     top: 23%;
     left: 50%;
     min-width: 100%;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
-  }
+}
 
-  .center2 {
+.center2 {
     position: absolute;
     top: 52%;
     left: 50%;
     min-width: 100%;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
-  }
+}
 
-  .center3 {
+.center3 {
     position: absolute;
     top: 78%;
     left: 50%;
     min-width: 100%;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
-  }
+}
 
-  .h {
+.h {
     position: absolute;
     top: -75%;
     left: 25%;
     min-width: 100%;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
-  }
-  
-  .rotate{
-    rotate: 270deg;
-  }
+}
 
-  .down{
+.rotate {
+    rotate: 270deg;
+}
+
+.down {
     position: absolute;
     top: 20%;
     left: 20%;
     /* bring your own prefixes */
-  }
+}
 
-  .downA{
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    /* bring your own prefixes */
-  }
-
-  .snowflake {
+.snowflake {
     color: #fff;
     font-size: 1.5em;
     font-family: Arial, sans-serif;
     text-shadow: 0 0 5px #000;
-  }
+}
 
-  @-webkit-keyframes snowflakes-fall {
+@-webkit-keyframes snowflakes-fall {
     0% {
-      top: -10%;
+        top: -10%;
     }
 
     100% {
-      top: 100%;
+        top: 100%;
     }
-  }
+}
 
-  @-webkit-keyframes snowflakes-shake {
+@-webkit-keyframes snowflakes-shake {
 
     0%,
     100% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
 
     50% {
-      -webkit-transform: translateX(80px);
-      transform: translateX(80px);
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px);
     }
-  }
+}
 
-  @keyframes snowflakes-fall {
+@keyframes snowflakes-fall {
     0% {
-      top: -10%;
+        top: -10%;
     }
 
     100% {
-      top: 100%;
+        top: 100%;
     }
-  }
+}
 
-  @keyframes snowflakes-shake {
+@keyframes snowflakes-shake {
 
     0%,
     100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
 
     50% {
-      transform: translateX(80px);
+        transform: translateX(80px);
     }
-  }
+}
