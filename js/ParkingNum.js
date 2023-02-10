@@ -50,6 +50,7 @@ function updateText() {
     }
   });
 }
+
 $(document).ready(function () {
   setInterval(updateText, 1000);
 });
