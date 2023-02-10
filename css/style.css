@@ -163,6 +163,13 @@ body {
     /* bring your own prefixes */
   }
 
+  .downA{
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    /* bring your own prefixes */
+  }
+
   .snowflake {
     color: #fff;
     font-size: 1.5em;
