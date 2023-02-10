@@ -22,7 +22,7 @@ h3 {
 }
 
 h3A {
-    font-size: 55px;
+    font-size: 60px;
 }
 
 h3B {
@@ -96,7 +96,7 @@ noti {
 
 .center {
     position: absolute;
-    top: 23%;
+    top: 8%;
     left: 50%;
     min-width: 100%;
     /* bring your own prefixes */
