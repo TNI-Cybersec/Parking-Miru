@@ -15,7 +15,7 @@ function updateText() {
             b = 0;
           }
           var c = a + b;
-          document.getElementById("content").innerHTML = c;
+          document.getElementById("contentM").innerHTML = c;
         }
       };
       xhttp2.open("GET", "FileText/Parking_Zone_C.txt", true);
@@ -25,34 +25,33 @@ function updateText() {
   xhttp.open("GET", "FileText/Parking_Zone_B.txt", true);
   xhttp.send();
 }
-setInterval(updateText, 1000);
+setInterval(updateText, 1000); 
 */
 
 function updateText() {
   $.ajax({
     url: "FileText/Parking_Zone_B.txt",
     success: function (response) {
-      var a = parseFloat(response);
+      var a = parseInt(response);
       if (isNaN(a)) {
         a = 0;
       }
       $.ajax({
         url: "FileText/Parking_Zone_C.txt",
         success: function (response) {
-          var b = parseFloat(response);
+          var b = parseInt(response);
           if (isNaN(b)) {
             b = 0;
           }
           var c = a + b;
-          $("#content").html(c);
+          $("#contentUpdated").html(c);
         }
       });
     }
   });
 }
-
 $(document).ready(function () {
-  setInterval(updateText, 2000);
+  setInterval(updateText, 1000);
 });
 
 /*
