@@ -69,14 +69,14 @@ def checkParkingSpace(imPro):
 
         # Send updated value of d to localhost every 5 seconds
         time.sleep(5)
-        requests.post('http://localhost:3000/values1', json={'parking_space': d})
+        requests.post('http://localhost:5000/values1', json={'parking_space': d})
 
     # Show Info on Camera
     cvzone.putTextRect(im, f'Parking Lot Center : {spaceCounter} from {len(posList)}', (20, 49), scale=3,
                        thickness=3, offset=20, colorR=(0, 0, 0))
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000)
+    app.run(host='0.0.0.0', port=5000)
 
 while True:
     # RTSP H.264 Codec Video
