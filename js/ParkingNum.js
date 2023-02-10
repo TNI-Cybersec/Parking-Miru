@@ -1,4 +1,4 @@
-
+/*
 function updateText() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
@@ -26,9 +26,9 @@ function updateText() {
   xhttp.send();
 }
 setInterval(updateText, 1000); 
+*/
 
 
-/*
 function updateText() {
   $.ajax({
     url: "FileText/Parking_Zone_B.txt",
@@ -51,7 +51,6 @@ function updateText() {
     }
   });
 }
-*/
 
 $(document).ready(function () {
   setInterval(updateText, 1000);
