@@ -3,6 +3,9 @@ import queue
 import cv2
 import cvzone
 import numpy as np
+import time
+import requests
+from flask import Flask, request
 
 q = queue.Queue()
 
@@ -27,6 +30,14 @@ cap.set(cv2.CAP_PROP_BUFFERSIZE, 256)
 with open('TniParkPos', 'rb') as f:
     posList = pickle.load(f)
 
+app = Flask(__name__)
+
+@app.route('/values1', methods=['POST'])
+def value1():
+    data = request.get_json()
+    parking_space = data['parking_space']
+    print('Updated parking space:', parking_space)
+    return 'OK'
 
 def checkParkingSpace(imPro):
     spaceCounter = 0
@@ -56,14 +67,16 @@ def checkParkingSpace(imPro):
         # Show count on rectangle space
         cvzone.putTextRect(im, str(count), (x, y + height - 3), scale=1, thickness=2, offset=0, colorR=color)
 
+        # Send updated value of d to localhost every 5 seconds
+        time.sleep(5)
+        requests.post('http://localhost:3000/values1', json={'parking_space': d})
+
     # Show Info on Camera
     cvzone.putTextRect(im, f'Parking Lot Center : {spaceCounter} from {len(posList)}', (20, 49), scale=3,
                        thickness=3, offset=20, colorR=(0, 0, 0))
 
-    # Show Info Full Screen
-    # cvzone.putTextRect(im, f'Parking Lot Center : {spaceCounter}', (430, 150), scale=7,
-    #                    thickness=10, offset=1920, colorT=(255, 255, 255), colorR=(0, 0, 0))
-
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=3000)
 
 while True:
     # RTSP H.264 Codec Video

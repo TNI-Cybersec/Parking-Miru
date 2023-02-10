@@ -53,13 +53,13 @@ function updateTextM() {
   xhttp.open("GET", "FileText/Parking_Zone_B.txt", true);
   xhttp.send();
 }
-setInterval(updateTextM, 100);
+setInterval(updateTextM, 1000);
 
 
 function getValues() {
   let value1;
   let value2;
-  fetch("http://localhost:5000/values1")
+  fetch("http://localhost:3000/values1")
     .then(response => response.json())
     .then(data => {
       value1 = data.value1;
