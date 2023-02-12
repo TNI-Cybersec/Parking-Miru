@@ -6,7 +6,7 @@ setInterval(function() {
 
   // Set parking noti texts
   const parkingNotiTexts = ["ที่จอดว่าง", "Avaliable", "空車"];
-  const parkingIndex = Math.floor(seconds / 10) % parkingNotiTexts.length;
+  const parkingIndex = Math.floor(seconds / 5) % parkingNotiTexts.length;
   const parkingNotiText = parkingNotiTexts[parkingIndex];
 
   // Update title element
