@@ -9,7 +9,7 @@ setInterval(function() {
     staff: ["ที่จอดรถบุคลากร", "Staff Parking", "スタッフ用駐車場"],
     guest: ["บุคคลทั่วไปจอดได้", "Guest Parking", "ゲスト用駐車場"],
   };
-  const parkingIndex = Math.floor(seconds / 5) % parkingTexts.staff.length;
+  const parkingIndex = Math.floor(seconds / 7.5) % parkingTexts.staff.length;
   const parkingNotiText = (hours >= 8 && hours < 16) ? parkingTexts.staff[parkingIndex] : parkingTexts.guest[parkingIndex];
 
   // Update text element
