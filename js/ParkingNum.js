@@ -52,4 +52,106 @@ function getValues() {
     document.getElementById("contentGet").innerHTML = value1 + value2;
 }
 setInterval(getValues, 1000);
+
+function fetchTextFile(url) {
+  return new Promise(function(resolve, reject) {
+    $.ajax({
+      url: url,
+      success: function(response) {
+        var value = parseInt(response);
+        if (isNaN(value)) {
+          reject(new Error("Failed to parse value from " + url));
+        }
+        resolve(value);
+      },
+      error: function(xhr, status, error) {
+        reject(new Error("Failed to fetch data from " + url + ": " + error));
+      }
+    });
+  });
+}
+
+function debounce(func, wait) {
+  let timeout;
+  return function() {
+    const context = this;
+    const args = arguments;
+    const later = function() {
+      timeout = null;
+      func.apply(context, args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+async function updateText() {
+  try {
+    var a = await fetchTextFile("FileText/Parking_Zone_B.txt");
+    var b = await fetchTextFile("FileText/Parking_Zone_C.txt");
+    var c = a + b;
+    $("#content").text(c);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+$(document).ready(function() {
+  const debouncedUpdateText = debounce(updateText, 1000);
+  setInterval(debouncedUpdateText, 1000);
+});
+
+WebSocket
+
+function fetchTextFile(url) {
+  return new Promise(function(resolve, reject) {
+    $.ajax({
+      url: url,
+      success: function(response) {
+        var value = parseInt(response);
+        if (isNaN(value)) {
+          reject(new Error("Failed to parse value from " + url));
+        }
+        resolve(value);
+      },
+      error: function(xhr, status, error) {
+        reject(new Error("Failed to fetch data from " + url + ": " + error));
+      }
+    });
+  });
+}
+
+function debounce(func, wait) {
+  let timeout;
+  return function() {
+    const context = this;
+    const args = arguments;
+    const later = function() {
+      timeout = null;
+      func.apply(context, args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+async function updateText() {
+  try {
+    var a = await fetchTextFile("FileText/Parking_Zone_B.txt");
+    var b = await fetchTextFile("FileText/Parking_Zone_C.txt");
+    var c = a + b;
+    $("#content").text(c);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+$(document).ready(function() {
+  const debouncedUpdateText = debounce(updateText, 1000);
+  const socket = new WebSocket("ws://example.com/path/to/socket");
+  socket.addEventListener("message", () => {
+    debouncedUpdateText();
+  });
+});
+
 */
