@@ -6,7 +6,7 @@ import numpy as np
 
 q = queue.Queue()
 
-width, height = 30, 30
+width, height = 30, 70
 
 # Video feed from IPC03 via RTSP
 global im
