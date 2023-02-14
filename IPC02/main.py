@@ -38,7 +38,7 @@ def checkParkingSpace(imPro):
         # cv2.imshow(str(x * y), imCrop)
         count = cv2.countNonZero(imCrop)
 
-        if count < 50:
+        if count < 250:
             color = (0, 255, 0)
             thickness = 2
             spaceCounter += 1
