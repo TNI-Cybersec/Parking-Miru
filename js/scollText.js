@@ -8,5 +8,5 @@ setInterval(function() {
     else {
       document.getElementById("scoll").innerHTML = "ตอนนี้บุคคลทั่วไปสามารถจอดได้เลย";
     }
-}, 10);
+}, 1000);
   

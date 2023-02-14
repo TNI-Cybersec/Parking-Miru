@@ -14,4 +14,4 @@ setInterval(function() {
 
   // Update text element
   document.getElementById("text").innerHTML = parkingNotiText;
-}, 10);
+}, 500);

@@ -7,4 +7,4 @@ function refreshTime() {
   var formattedString = dateString.replace(", ", " ");
   document.getElementById("date").innerHTML = formattedString;
 }
-setInterval(refreshTime, 10);
+setInterval(refreshTime, 1000);
