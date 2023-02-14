@@ -26,6 +26,8 @@ $(document).ready(function () {
 });
 
 /*
+If Use
+
 function getValues() {
     let value1;
     let value2;
