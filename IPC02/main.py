@@ -11,10 +11,10 @@ width, height = 30, 30
 # Video feed from IPC02 via RTSP
 global im
 im = None
-cap = cv2.VideoCapture("rtsp://streaming.planetcloud.cloud:5541/7707ed09-0c72-4429-b2ea-a0cc521773ea/0")
+# cap = cv2.VideoCapture("rtsp://streaming.planetcloud.cloud:5541/7707ed09-0c72-4429-b2ea-a0cc521773ea/0")
 
 # Video feed via File Local
-# cap = cv2.VideoCapture('TniPark_M.mp4')
+cap = cv2.VideoCapture('TniPark_M.mp4')
 
 # Set size Video
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
@@ -49,10 +49,13 @@ def checkParkingSpace(imPro):
         cv2.rectangle(im, pos, (pos[0] + width, pos[1] + height), color, thickness)
 
         # Record Variable in Text File
-        d = spaceCounter
-        with open('../FileText/Parking_Zone_B.txt', 'w') as f:
-            f.write(str(d) + '\n')
-
+        with open('../FileText/Parking_Zone_B.txt', 'r') as f:
+            current_value = int(f.readline())
+        # Check if the new value is different from the current value before saving
+        if spaceCounter != current_value:
+            with open('../FileText/Parking_Zone_B.txt', 'w') as f:
+                f.write(str(spaceCounter) + '\n')
+            
         # Show count on rectangle space
         cvzone.putTextRect(im, str(count), (x, y + height - 3), scale=1, thickness=2, offset=0, colorR=color)
 
