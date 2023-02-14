@@ -1,29 +1,36 @@
-function updateText() {
-  $.ajax({
-    url: "FileText/Parking_Zone_B.txt",
-    success: function (response) {
-      var a = parseInt(response);
-      if (isNaN(a)) {
-        a = 0;
-      }
-      $.ajax({
-        url: "FileText/Parking_Zone_C.txt",
-        success: function (response) {
-          var b = parseInt(response);
-          if (isNaN(b)) {
-            b = 0;
-          }
-          var c = a + b;
-          $("#content").html(c);
+function fetchTextFile(url) {
+  return new Promise(function(resolve, reject) {
+    $.ajax({
+      url: url,
+      success: function(response) {
+        var value = parseInt(response);
+        if (isNaN(value)) {
+          reject(new Error("Failed to parse value from " + url));
         }
-      });
-    }
+        resolve(value);
+      },
+      error: function(xhr, status, error) {
+        reject(new Error("Failed to fetch data from " + url + ": " + error));
+      }
+    });
   });
 }
 
-$(document).ready(function () {
+async function updateText() {
+  try {
+    var a = await fetchTextFile("FileText/Parking_Zone_B.txt");
+    var b = await fetchTextFile("FileText/Parking_Zone_C.txt");
+    var c = a + b;
+    $("#content").text(c);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+$(document).ready(function() {
   setInterval(updateText, 1000);
 });
+
 
 /*
 If Use
