@@ -1,7 +1,7 @@
 import cv2
 import pickle
 
-width, height = 30, 30
+width, height = 30, 70
 
 try:
     with open('TniParkPos', 'rb') as f:
