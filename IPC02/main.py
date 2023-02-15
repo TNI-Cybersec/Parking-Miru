@@ -11,10 +11,10 @@ width, height = 30, 70
 # Video feed from IPC02 via RTSP
 global im
 im = None
-cap = cv2.VideoCapture("rtsp://streaming.planetcloud.cloud:5541/7707ed09-0c72-4429-b2ea-a0cc521773ea/0")
+# cap = cv2.VideoCapture("rtsp://streaming.planetcloud.cloud:5541/7707ed09-0c72-4429-b2ea-a0cc521773ea/0")
 
 # Video feed via File Local
-# cap = cv2.VideoCapture('TniPark_M.mp4')
+cap = cv2.VideoCapture('TniPark_M.mp4')
 
 # Set size Video
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
