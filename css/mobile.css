@@ -140,7 +140,5 @@ noti {
     transform: scale(1.5);
     z-index: 1;
     overflow: visible;
-    background: rgb(0, 0, 0)
-      url("../pic/ring-resize-white-36.svg")
-      no-repeat center center;
-  }
+    background: rgb(0, 0, 0) url("../pic/ring-resize-white-36.svg") no-repeat center center;
+}
