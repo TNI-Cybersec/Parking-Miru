@@ -154,4 +154,37 @@ $(document).ready(function() {
   });
 });
 
+
+function fetchCSVFile(url) {
+  return new Promise(function(resolve, reject) {
+    $.get({
+      url: url,
+      dataType: "text", // use "text" instead of "csv" to avoid automatic parsing
+      success: function(response) {
+        // extract the first value of the first line of the CSV data
+        var firstValue = response.split("\n")[0].split(",")[0];
+        resolve(parseInt(firstValue));
+      },
+      error: function(xhr, status, error) {
+        reject(new Error("Failed to fetch data from " + url + ": " + error));
+      }
+    });
+  });
+}
+
+async function updateText() {
+  try {
+    var a = await fetchCSVFile("FileText/Parking_Zone_B.csv");
+    var b = await fetchCSVFile("FileText/Parking_Zone_C.csv");
+    var c = a + b;
+    $("#content").text(c);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+$(document).ready(function() {
+  setInterval(updateText, 1000);
+});
+
 */

@@ -46,7 +46,7 @@ def checkParkingSpace(imPro):
         """
         # Record Variable in Text File
         d = spaceCounter
-        with open('../FileText/Parking_Zone_C.csv', 'w') as t:
+        with open('../FileText/Parking_Zone_C.txt', 'w') as t:
             t.write(str(d) + '\n')
         """
         # Show count on rectangle space
