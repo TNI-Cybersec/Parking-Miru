@@ -1,11 +1,11 @@
 import cv2
 import pickle
 
-width, height = 30, 40
+width, height = 20, 20
 
-# pickle (High Resolution)
+# pickle for (Low Resolution)
 try:
-    with open('TniParkPos', 'rb') as f:
+    with open('TniParkPos_2', 'rb') as f:
         posList = pickle.load(f)
 except:
     posList = []
@@ -20,13 +20,13 @@ def mouseClick(events, x, y, flags, params):
             if x1 < x < x1 + width and y1 < y < y1 + height:
                 posList.pop(i)
 
-    # pickle for (High Resolution)
-    with open('TniParkPos', 'wb') as p:
+    # pickle for (Low Resolution)
+    with open('TniParkPos_2', 'wb') as p:
         pickle.dump(posList, p)
 
 
 while True:
-    im = cv2.imread('TniParkImg.jpg')
+    im = cv2.imread('TniParkImg_2.jpg')
     for pos in posList:
         cv2.rectangle(im, pos, (pos[0] + width, pos[1] + height), (255, 0, 255), 2)
 

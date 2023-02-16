@@ -10,8 +10,8 @@ width, height = 20, 20
 global im
 im = None
 
-# Video feed from IPC02 via RTSP (Low Resolution)
-cap = cv2.VideoCapture("rtsp://streaming.planetcloud.cloud:5541/7707ed09-0c72-4429-b2ea-a0cc521773ea/1")
+# Video feed from IPC03 via RTSP (Low Resolution)
+cap = cv2.VideoCapture("rtsp://streaming.planetcloud.cloud:5541/7f6a5e94-60b4-4a0e-b564-cdabff325120/1")
 
 # Set the buffer size
 cap.set(cv2.CAP_PROP_BUFFERSIZE, 256)
@@ -43,7 +43,7 @@ def checkParkingSpace(imPro):
         """
         # Record Variable in Text File
         d = spaceCounter
-        with open('../FileText/Parking_Zone_B.csv', 'w') as t:
+        with open('../FileText/Parking_Zone_C.csv', 'w') as t:
             t.write(str(d) + '\n')
         """
         # Show count on rectangle space
@@ -51,12 +51,12 @@ def checkParkingSpace(imPro):
         """
 
     # Show Info on Camera (Low Resolution)
-    cvzone.putTextRect(im, f'Parking Lot Center : {spaceCounter} from {len(posList)}', (20, 40), scale=2,
+    cvzone.putTextRect(im, f'Parking Lot Right : {spaceCounter} from {len(posList)}', (20, 40), scale=2,
                        thickness=3, offset=20, colorR=(0, 0, 0))
 
     """
     # Show Info Full Screen (Low Resolution)
-    cvzone.putTextRect(im, f'Parking Lot Center : {spaceCounter}', (50, 150), scale=3,
+    cvzone.putTextRect(im, f'Parking Lot Right : {spaceCounter}', (50, 150), scale=3,
                        thickness=5, offset=480, colorT=(255, 255, 255), colorR=(0, 0, 0))
     """
 
@@ -85,4 +85,4 @@ while True:
 
     checkParkingSpace(imDilate)
 
-    cv2.imshow("Tni Parking IPC02", im)
+    cv2.imshow("Tni Parking IPC03", im)

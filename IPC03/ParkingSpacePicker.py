@@ -1,8 +1,9 @@
 import cv2
 import pickle
 
-width, height = 30, 70
+width, height = 30, 40
 
+# pickle (High Resolution)
 try:
     with open('TniParkPos', 'rb') as f:
         posList = pickle.load(f)
@@ -19,8 +20,9 @@ def mouseClick(events, x, y, flags, params):
             if x1 < x < x1 + width and y1 < y < y1 + height:
                 posList.pop(i)
 
-    with open('TniParkPos', 'wb') as f:
-        pickle.dump(posList, f)
+    # pickle for (High Resolution)
+    with open('TniParkPos', 'wb') as p:
+        pickle.dump(posList, p)
 
 
 while True:
