@@ -18,8 +18,8 @@ function fetchTextFile(url) {
 
 async function updateText() {
   try {
-    var a = await fetchTextFile("FileText/Parking_Zone_B.txt");
-    var b = await fetchTextFile("FileText/Parking_Zone_C.txt");
+    var a = await fetchTextFile("FileText/Parking_Zone_B.csv");
+    var b = await fetchTextFile("FileText/Parking_Zone_C.csv");
     var c = a + b;
     $("#content").text(c);
   } catch (err) {
