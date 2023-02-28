@@ -1,0 +1,16 @@
+{
+  "name": "Parking Miru",
+  "short_name": "Parking Miru",
+  "theme_color": "#000",
+  "background_color": "#000",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "../pic/ParkingMiruLogo.png",
+      "sizes": "120x150",
+      "type": "image/png"
+    }
+  ]
+}
