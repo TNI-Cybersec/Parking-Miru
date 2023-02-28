@@ -4,6 +4,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: "Krub", sans-serif;
+    -webkit-font-family: "Krub", sans-serif;
     background: #000000 !important;
     color: rgb(255, 255, 255);
 }
@@ -11,28 +12,37 @@ body {
 h1 {
     font-size: 25vh;
     font-family: "Share Tech Mono", sans-serif;
+    -webkit-font-size: 25vh;
+    -webkit-font-family: "Share Tech Mono", sans-serif;
 }
 
 h2 {
     font-size: 100px;
+    -webkit-font-size: 100px;
 }
 
 h3 {
     font-size: 10vh;
+    -webkit-font-size: 10vh;
 }
 
 h3A {
     font-size: 6vh;
+    -webkit-font-size: 6vh;
 }
 
 h3B {
     font-size: 8vh;
+    -webkit-font-size: 8vh;
 }
 
 noti {
     font-size: 5vh;
     font-weight: 700;
     font-family: "Krub", sans-serif;
+    -webkit-font-size: 5vh;
+    -webkit-font-weight: 700;
+    -webkit-font-family: "Krub", sans-serif;
 }
 
 .R {
