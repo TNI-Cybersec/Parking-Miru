@@ -1,7 +1,7 @@
 {
   "name": "Parking Miru",
   "short_name": "Parking Miru",
-  "description": "Parking Miru is a AI Parking Space by cloud CCTV Camera By TNI Cybersec",
+  "description": "Parking Miru is a AI Parking Space by cloud CCTV Camera By TNI Cybersec.",
   "theme_color": "#000",
   "background_color": "#000",
   "display": "standalone",
