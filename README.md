@@ -8,7 +8,7 @@
 |Tool|[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)|
 |----|----|
 
-**Parking Miru** is a AI Parking Space by Smart Pole.
+**Parking Miru** is a AI Parking Space by cloud CCTV Camera.
 ## Usage
 
 ### Prerequisite
