@@ -1,6 +1,7 @@
 {
   "name": "Parking Miru",
-  "short_name": "Parkin_Miru",
+  "short_name": "[TNI Cybersec] Parking Miru",
+  "description": "Parking Miru is a AI Parking Space by cloud CCTV Camera By TNI Cybersec",
   "theme_color": "#000",
   "background_color": "#000",
   "display": "standalone",
@@ -8,8 +9,8 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "/pic/ParkingMiruLogo.png",
-      "sizes": "120x150",
+      "src": "/pic/ParkingMiruIcon144x144.png",
+      "sizes": "144x144",
       "type": "image/png"
     }
   ]
