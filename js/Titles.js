@@ -1,10 +1,11 @@
 /* 
 Copyright (c) 2023 Parking Miru Web Engine By Karin Vitoonkijvanit
 
-*** Unauthorized modification of the files in the Parking Miru Web Engine 
-section is not responsible for any damage or errors that will occur and 
-constitutes a violation of the of the creators of the Web Engine. *** 
+*** Unauthorized modification of files in Parking Miru Web Engine
+shall not be held liable for any damages or errors. and
+It is a disruption of Parking Miru Web Engine's system. *** 
 */
+
 setInterval(function() {
   const currentTime = new Date();
   const hours = currentTime.getHours();
