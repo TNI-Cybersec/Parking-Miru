@@ -53,6 +53,13 @@ noti {
     -webkit-font-family: "Krub", sans-serif;
 }
 
+version {
+    font-size: 15px !important; 
+    color: rgb(152, 152, 152) !important;
+    font-weight: 800 !important;
+    font-family: "Krub", sans-serif;
+}
+
 .R {
     color: rgb(255, 85, 85) !important;
 }
@@ -81,12 +88,7 @@ noti {
 }
 
 .center {
-    position: absolute;
-    top: 8%;
-    left: 50%;
-    min-width: 100%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
+    margin-top: 1vh !important;
 }
 
 .center2 {
