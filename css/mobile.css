@@ -18,9 +18,9 @@ body {
 }
 
 h1 {
-    font-size: 22vh;
+    font-size: 28vh;
     font-family: "Krub", sans-serif;
-    -webkit-font-size: 22vh;
+    -webkit-font-size: 28vh;
     -webkit-font-family: "Krub", sans-serif;
 }
 
@@ -45,19 +45,27 @@ noti {
 
 version {
     font-size: 15px !important; 
-    color: rgb(152, 152, 152) !important;
+    color: rgb(198, 198, 198) !important;
     font-weight: 800 !important;
     font-family: "Krub", sans-serif;
 }
 
 .roundedA {
-    border-radius: 30px;
-    border-width: 3px !important;
-    background: #332600;
+    border-radius: 40px;
+    border-width: 0px !important;
+    background: #252525;
+}
+
+.roundedB {
+    padding: 5px !important;
+    border-radius: 50px;
+    border-width: 0px !important;
+    background: #252525;
 }
 
 .nonBorder {
     border-width: 0px !important;
+    border-radius: 30px !important;
 }
 
 .R {
@@ -93,11 +101,16 @@ version {
 
 .center2 {
     position: absolute;
-    top: 52%;
+    top: 50%;
     left: 50%;
     min-width: 100%;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
+}
+
+.center3 {
+    padding-top: 2vh !important;
+    padding-bottom: 2vh !important;
 }
 
 .snowflake {
