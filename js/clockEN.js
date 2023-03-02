@@ -13,6 +13,6 @@ function refreshTime() {
     timeZone: "Asia/Bangkok",
   });
   var formattedString = dateString.replace(", ", " ");
-  document.getElementById("date").innerHTML = formattedString;
+  document.getElementById("dateTime").innerHTML = formattedString;
 }
 setInterval(refreshTime, 1000);
