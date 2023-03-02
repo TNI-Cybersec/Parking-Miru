@@ -18,10 +18,10 @@ body {
 }
 
 h1 {
-    font-size: 25vh;
-    font-family: "Share Tech Mono", sans-serif;
-    -webkit-font-size: 25vh;
-    -webkit-font-family: "Share Tech Mono", sans-serif;
+    font-size: 22vh;
+    font-family: "Krub", sans-serif;
+    -webkit-font-size: 22vh;
+    -webkit-font-family: "Krub", sans-serif;
 }
 
 h2 {
@@ -30,25 +30,15 @@ h2 {
 }
 
 h3 {
-    font-size: 10vh;
-    -webkit-font-size: 10vh;
-}
-
-h3A {
-    font-size: 6vh;
-    -webkit-font-size: 6vh;
-}
-
-h3B {
-    font-size: 8vh;
-    -webkit-font-size: 8vh;
+    font-size: 50px;
+    -webkit-font-size: 50px;
 }
 
 noti {
-    font-size: 5vh;
+    font-size: 30px;
     font-weight: 700;
     font-family: "Krub", sans-serif;
-    -webkit-font-size: 5vh;
+    -webkit-font-size: 30px;
     -webkit-font-weight: 700;
     -webkit-font-family: "Krub", sans-serif;
 }
@@ -58,6 +48,16 @@ version {
     color: rgb(152, 152, 152) !important;
     font-weight: 800 !important;
     font-family: "Krub", sans-serif;
+}
+
+.roundedA {
+    border-radius: 30px;
+    border-width: 3px !important;
+    background: #332600;
+}
+
+.nonBorder {
+    border-width: 0px !important;
 }
 
 .R {
