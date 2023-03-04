@@ -12,10 +12,10 @@ setInterval(function() {
   const minutes = currentTime.getMinutes();
   const seconds = currentTime.getSeconds();
 
-  // Set parking noti texts
+  // Set parking noti texts スタッフ用駐車場 ゲスト用駐車場
   const parkingTexts = {
-    staff: ["ที่จอดรถบุคลากร", "Staff Parking", "スタッフ用駐車場"],
-    guest: ["บุคคลทั่วไปจอดได้", "Guest Parking", "ゲスト用駐車場"],
+    staff: ["ที่จอดรถบุคลากร", "Personnel Parking"],
+    guest: ["บุคคลทั่วไปจอดได้", "Guest Parking"],
   };
   const parkingIndex = Math.floor(seconds / 10) % parkingTexts.staff.length;
   const parkingNotiText = (hours >= 8 && hours < 16) ? parkingTexts.staff[parkingIndex] : parkingTexts.guest[parkingIndex];

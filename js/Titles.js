@@ -12,8 +12,8 @@ setInterval(function() {
   const minutes = currentTime.getMinutes();
   const seconds = currentTime.getSeconds();
 
-  // Set parking noti texts
-  const parkingNotiTexts = ["ที่จอดว่าง", "Avaliable", "空車"];
+  // Set parking noti texts 空車
+  const parkingNotiTexts = ["ที่จอดว่าง", "Avaliable"];
   const parkingIndex = Math.floor(seconds / 10) % parkingNotiTexts.length;
   const parkingNotiText = parkingNotiTexts[parkingIndex];
 
