@@ -6,7 +6,7 @@ import numpy as np
 
 q = queue.Queue()
 
-width, height = 30, 60
+width, height = 60, 20
 global im
 im = None
 

@@ -6,55 +6,6 @@ shall not be held liable for any damages or errors. and
 It is a disruption of Parking Miru Web Engine's system. *** 
 */
 
-(function() {
-  let previousSum = null; // Store the previous sum value to check against new values
-
-  const fetchValueFromFile = (url) => {
-    return new Promise((resolve, reject) => {
-      $.ajax({
-        url: url,
-        success: (response) => {
-          const value = parseInt(response, 10);
-          if (isNaN(value)) {
-            reject(new Error(`Failed to parse value from ${url}`));
-          }
-          resolve(value);
-        },
-        error: (xhr, status, error) => {
-          reject(new Error(`Failed to fetch data from ${url}: ${error}`));
-        }
-      });
-    });
-  };
-
-  const updateContentValue = async () => {
-    try {
-      const a = await fetchValueFromFile("FileText/Parking_Zone_B.csv");
-      const b = await fetchValueFromFile("FileText/Parking_Zone_C.csv");
-      const sum = a + b;
-
-      if (sum !== previousSum) {
-        // Instead of using requestAnimationFrame, we directly update the content
-        $("#content").text(sum);
-        previousSum = sum;
-      }
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setTimeout(updateContentValue, 1000);  // Chain the next update after the current one is complete
-    }
-  };
-
-  $(document).ready(() => {
-    updateContentValue();  // Start the initial update
-  });
-
-})();
-
-
-
-
-/*
 function fetchTextFile(url) {
   return new Promise(function(resolve, reject) {
     $.ajax({
@@ -89,9 +40,7 @@ $(document).ready(function() {
 });
 
 
-*/
-
-/* 
+/*
 If Use
 
 function getValues() {
