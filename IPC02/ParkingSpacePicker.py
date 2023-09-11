@@ -1,7 +1,7 @@
 import cv2
 import pickle
 
-width, height = 30, 40
+width, height = 30, 60
 
 # pickle (High Resolution)
 try:

@@ -50,6 +50,7 @@ It is a disruption of Parking Miru Web Engine's system. ***
 })();
 
 
+
 /*
 function fetchTextFile(url) {
   return new Promise(function(resolve, reject) {
