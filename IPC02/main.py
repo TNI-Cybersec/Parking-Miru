@@ -40,18 +40,18 @@ def checkParkingSpace(imPro):
         else:
             color = (0, 0, 255)
             thickness = 3
-        """
+        
         # Show rectangle space
         cv2.rectangle(im, pos, (pos[0] + width, pos[1] + height), color, thickness)
-        """
+        
         # Record Variable in Text File
         d = spaceCounter
         with open('../FileText/Parking_Zone_B.csv', 'w') as t:
             t.write(str(d) + '\n')
-        """
+        
         # Show count on rectangle space
         cvzone.putTextRect(im, str(count), (x, y + height - 3), scale=1, thickness=2, offset=0, colorR=color)
-        """
+        
 
     # Show Info on Camera (High Resolution)
     cvzone.putTextRect(im, f'Parking Lot Center : {spaceCounter} from {len(posList)}', (20, 49), scale=3,
