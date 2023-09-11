@@ -6,40 +6,48 @@ shall not be held liable for any damages or errors. and
 It is a disruption of Parking Miru Web Engine's system. *** 
 */
 
-const fetchValueFromFile = (url) => {
-  return new Promise((resolve, reject) => {
-    $.ajax({
-      url: url,
-      dataType: 'text', // Explicitly mention the expected dataType
-      success: (response) => {
-        const value = parseInt(response, 10);
-        if (isNaN(value)) {
-          reject(new Error(`Failed to parse value from ${url}`));
+(function() {
+  let previousSum = null; // Store the previous sum value to check against new values
+
+  const fetchValueFromFile = (url) => {
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: url,
+        success: (response) => {
+          const value = parseInt(response, 10);
+          if (isNaN(value)) {
+            reject(new Error(`Failed to parse value from ${url}`));
+          }
+          resolve(value);
+        },
+        error: (xhr, status, error) => {
+          reject(new Error(`Failed to fetch data from ${url}: ${error}`));
         }
-        resolve(value);
-      },
-      error: (xhr, status, error) => {
-        reject(new Error(`Failed to fetch data from ${url}: ${error}`));
-      }
+      });
     });
+  };
+
+  const updateContentValue = async () => {
+    try {
+      const a = await fetchValueFromFile("FileText/Parking_Zone_B.csv");
+      const b = await fetchValueFromFile("FileText/Parking_Zone_C.csv");
+      const sum = a + b;
+
+      // Only update the DOM if the sum has changed
+      if (sum !== previousSum) {
+        $("#content").text(sum);
+        previousSum = sum;
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  $(document).ready(() => {
+    setInterval(updateContentValue, 1000);
   });
-};
 
-const updateContentValue = async () => {
-  try {
-    const a = await fetchValueFromFile("FileText/Parking_Zone_B.csv");
-    const b = await fetchValueFromFile("FileText/Parking_Zone_C.csv");
-    const sum = a + b;
-    $("#content").text(sum);
-  } catch (err) {
-    console.error(err);
-  }
-};
-
-$(document).ready(() => {
-  setInterval(updateContentValue, 1000);
-});
-
+})();
 
 
 /*
@@ -78,7 +86,6 @@ $(document).ready(function() {
 
 
 */
-
 
 /* 
 If Use
