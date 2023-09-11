@@ -9,7 +9,7 @@ It is a disruption of Parking Miru Web Engine's system. ***
 function refreshTime() {
   var dateString = new Date().toLocaleString("en-GB", {
     dateStyle: "short",
-    timeStyle: "medium",
+    timeStyle: "short",
     timeZone: "Asia/Bangkok",
   });
   var formattedString = dateString.replace(", ", " ");
