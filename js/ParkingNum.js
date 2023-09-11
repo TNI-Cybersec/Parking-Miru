@@ -33,21 +33,24 @@ It is a disruption of Parking Miru Web Engine's system. ***
       const b = await fetchValueFromFile("FileText/Parking_Zone_C.csv");
       const sum = a + b;
 
-      // Only update the DOM if the sum has changed
       if (sum !== previousSum) {
+        // Instead of using requestAnimationFrame, we directly update the content
         $("#content").text(sum);
         previousSum = sum;
       }
     } catch (err) {
       console.error(err);
+    } finally {
+      setTimeout(updateContentValue, 1000);  // Chain the next update after the current one is complete
     }
   };
 
   $(document).ready(() => {
-    setInterval(updateContentValue, 1000);
+    updateContentValue();  // Start the initial update
   });
 
 })();
+
 
 
 
