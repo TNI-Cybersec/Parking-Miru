@@ -4,7 +4,7 @@ import cv2
 import cvzone
 import numpy as np
 
-q = queue.Queue()
+q = queue.Queue() 
 
 width, height = 60, 20
 global im
