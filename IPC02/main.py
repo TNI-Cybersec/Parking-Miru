@@ -7,7 +7,7 @@ import numpy as np
 q = queue.Queue()
 
 width, height = 60, 20
-global im 
+global im
 im = None
 
 # Video feed from IPC02 via RTSP (High Resolution)
