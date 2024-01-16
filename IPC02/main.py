@@ -11,11 +11,11 @@ global im
 im = None
 
 # Video feed from IPC02 via RTSP (High Resolution)
-# cap = cv2.VideoCapture("rtsp://streaming.planetcloud.cloud:5541/7707ed09-0c72-4429-b2ea-a0cc521773ea/0")
-
+cap = cv2.VideoCapture("rtsp://streaming.planetcloud.cloud:5541/7707ed09-0c72-4429-b2ea-a0cc521773ea/0")
+"""
 # Video feed via File Local (for Fastest Code)
-cap = cv2.VideoCapture('TniPark_M.mp4')
-
+# cap = cv2.VideoCapture('TniPark_M.mp4')
+"""
 # Set the buffer size
 cap.set(cv2.CAP_PROP_BUFFERSIZE, 256)
 
